@@ -16,10 +16,16 @@ a {
 
 body {
   font-family: "Raleway", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
 }
 
 .layout {
-  background: linear-gradient(80deg, black, black, black, black, black, rgba(0, 0, 0, 0.6));
+  background-image: url("../images/jsandbw.png");
+  background-position: -622px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  border: 1px solid red;
   color: #f2f2f2;
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -29,24 +35,25 @@ body {
   width: 100vw;
 }
 .layout .item {
-  border: 1px solid red;
   display: grid;
 }
 
 footer {
   grid-column: 1/-1;
   grid-row: 3/-1;
+  letter-spacing: 0.07rem;
 }
-footer p {
-  border: 1px solid yellow;
+footer .last {
+  color: #d00000;
+  font-weight: bold;
 }
-@media (max-width: 825px) {
+@media (max-width: 950px) {
   footer {
     grid-template-columns: auto;
     justify-content: center;
   }
 }
-@media (min-width: 825px) {
+@media (min-width: 950px) {
   footer {
     grid-template-columns: 1fr auto auto;
   }
@@ -55,13 +62,22 @@ footer p {
 header {
   grid-column: 1/-1;
   grid-row: 1/1;
+  padding: 0.375rem;
 }
-@media (max-width: 825px) {
+@media (max-width: 950px) {
   header {
+    background-color: #00000099;
+    border-radius: 18px;
     grid-template-columns: auto;
+    padding: 0.75rem;
   }
 }
-@media (min-width: 825px) {
+@media (min-width: 950px) {
+  header {
+    grid-template-columns: 1fr auto 1fr;
+  }
+}
+@media (min-width: 1400px) {
   header {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -70,10 +86,32 @@ header {
 nav {
   text-transform: uppercase;
 }
+@media (min-width: 950px) {
+  nav {
+    grid-column: 3/-1;
+  }
+}
 nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+nav ul li a {
+  border: 3.3px solid transparent;
+  border-radius: 18px;
+  color: #dddbdb80;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+}
+nav ul li a.active {
+  border: 3.3px solid #d00000;
+  color: #f2f2f2;
+}
+
+body {
+  background: linear-gradient(80deg, black, black, black, black, black, rgba(0, 0, 0, 0.6));
 }
 
 /*# sourceMappingURL=styles.css.map */

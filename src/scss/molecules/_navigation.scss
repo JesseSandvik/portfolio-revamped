@@ -1,8 +1,31 @@
+@use '../breakpoints' as *;
+@use '../abstracts' as *;
+@use 'sass:math';
+
 nav {
   text-transform: uppercase;
+  @include lg {
+    grid-column: 3 / -1;
+  }
   ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    li {
+
+      a {
+        border: $default-border-width solid transparent;
+        border-radius: $default-border-radius;
+        color: $glass-bone;
+        padding: math.div($default-padding, 2) $default-padding;
+        @include btn-text;
+
+        &.active {
+          border: $default-border-width solid $rosso-corsa;
+          color: $secondary;
+        }
+      }
+    }
   }
 }

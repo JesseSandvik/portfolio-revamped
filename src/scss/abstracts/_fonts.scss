@@ -2,4 +2,12 @@
 
 body {
   font-family: 'Raleway', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+}
+
+@mixin btn-text {
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
 }

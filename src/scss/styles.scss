@@ -1,6 +1,17 @@
 @use 'global';
 @use 'breakpoints';
-@use './abstracts';
+@use './abstracts' as *;
 @use 'layout';
 @use './organisms';
 @use './molecules';
+
+body {
+  background: linear-gradient(80deg,
+    rgba($primary, 1.0),
+    rgba($primary, 1.0),
+    rgba($primary, 1.0),
+    rgba($primary, 1.0),
+    rgba($primary, 1.0),
+    rgba($primary, 0.6),
+  );
+}
