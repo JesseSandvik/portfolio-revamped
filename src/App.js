@@ -1,5 +1,6 @@
 import Footer from './organisms/footer/Footer';
 import Header from './organisms/header/Header';
+import Main from './organisms/main/Main';
 
 import './css/styles.css';
 
@@ -8,7 +9,7 @@ function App() {
     <div className="app">
       <div className="layout">
         <Header />
-        <div className="item"></div>
+        <Main></Main>
         <Footer />
       </div>
     </div>

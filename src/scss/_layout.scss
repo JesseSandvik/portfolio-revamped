@@ -9,13 +9,16 @@
     rgba($primary, 1.0),
     rgba($primary, 0.6),
   );
+  color: $secondary;
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   overflow-y: hidden;
+  padding: $default-padding;
   width: 100vw;
 
   .item {
     border: 1px solid red;
+    display: grid;
   }
 }

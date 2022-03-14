@@ -1,4 +1,17 @@
+@use '../breakpoints' as *;
+
 footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 1 / -1;
+  grid-row: 3 / -1;
+
+  p {
+    border: 1px solid yellow;
+  }
+  @include md {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+  @include lg {
+    grid-template-columns: 1fr auto auto;
+  }
 }

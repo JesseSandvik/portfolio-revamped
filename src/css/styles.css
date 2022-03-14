@@ -20,24 +20,60 @@ body {
 
 .layout {
   background: linear-gradient(80deg, black, black, black, black, black, rgba(0, 0, 0, 0.6));
+  color: #f2f2f2;
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   overflow-y: hidden;
+  padding: 0.75rem;
   width: 100vw;
 }
 .layout .item {
   border: 1px solid red;
+  display: grid;
 }
 
 footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 1/-1;
+  grid-row: 3/-1;
+}
+footer p {
+  border: 1px solid yellow;
+}
+@media (max-width: 825px) {
+  footer {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+}
+@media (min-width: 825px) {
+  footer {
+    grid-template-columns: 1fr auto auto;
+  }
 }
 
 header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 1/-1;
+  grid-row: 1/1;
+}
+@media (max-width: 825px) {
+  header {
+    grid-template-columns: auto;
+  }
+}
+@media (min-width: 825px) {
+  header {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+nav {
+  text-transform: uppercase;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=styles.css.map */
