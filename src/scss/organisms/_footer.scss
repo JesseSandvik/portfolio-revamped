@@ -9,6 +9,7 @@ footer {
   .last {
     color: $rosso-corsa;
     font-weight: bold;
+    letter-spacing: 0.1rem;
   }
 
   @include md {

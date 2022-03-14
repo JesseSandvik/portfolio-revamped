@@ -1,5 +1,6 @@
 @use '../abstracts' as *;
 @use '../breakpoints' as *;
+@use 'sass:math';
 
 main {
   display: grid;
@@ -9,28 +10,107 @@ main {
   grid-row: 2 / 2;
   margin: $default-margin;
 
-  .item {
-    border: 1px solid red;
-  }
-
   .b {
+    background: linear-gradient(80deg,
+      rgba($glass-primary, 0.9),
+      rgba($glass-primary, 0.5),
+      rgba($glass-primary, 0.5),
+      rgba($glass-rosso-corsa, 0.1),
+      rgba($glass-rosso-corsa, 0.1),
+      rgba($glass-rosso-corsa, 0.1),
+    );
+    border-radius: math.div($default-border-radius, 2);
+    padding: $default-padding;
+    transform: translate(5px);
     @include md {
       grid-column: 1 / 5;
-    grid-row: 1 / -1;
+      grid-row: 2 / 7;
     }
     @include lg {
       grid-column: 2 / 5;
-      grid-row: 1 / -1;
+      grid-row: 2 / 7;
+    }
+
+    .intro {
+      align-items: center;
+      border: 1px solid yellow;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: $default-padding;
+
+      h1 {
+        font-size: 5rem;
+      }
+
+      h2 {
+        font-size: 3rem;
+      }
+    }
+  }
+  .c {
+    border: 1px solid aqua;
+    display: grid;
+    padding: $default-padding;
+    transform: translate(0, -36px);
+    @include md {
+      grid-column: 1 / 5;
+      grid-row: 7 / 7;
+    }
+    @include lg {
+      grid-column: 2 / 5;
+      grid-row: 7 / 7;
+    }
+
+    .btns {
+      border: 1px solid violet;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+      button {
+        height: 75px;
+        width: 250px;
+      }
     }
   }
   .e {
+    background: linear-gradient(100deg,
+      rgba($glass-rosso-corsa, 0.1),
+      rgba($glass-rosso-corsa, 0.1),
+      rgba($glass-primary, 0.7),
+      rgba($glass-primary, 0.5),
+      rgba($glass-primary, 0.1),
+    );
+    border-radius: math.div($default-border-radius, 2);
+    transform: translate(-5px, 5px);
     @include md {
       grid-column: 5 / -1;
-      grid-row: 1 / -1;
+      grid-row: 1 / 5;
     }
     @include lg {
       grid-column: 5 / 8;
-      grid-row: 1 / -1;
+      grid-row: 1 / 5;
+    }
+  }
+  .f {
+    background: linear-gradient(80deg,
+      rgba($glass-rosso-corsa, 0.2),
+      rgba($glass-rosso-corsa, 0.1),
+      rgba($glass-primary, 0.7),
+      rgba($glass-primary, 0.5),
+      rgba($glass-primary, 0.1),
+    );
+    border-radius: math.div($default-border-radius, 2);
+    transform: translate(-5px, -5px);
+    @include md {
+      grid-column: 5 / -1;
+      grid-row: 5 / -1;
+    }
+    @include lg {
+      grid-column: 5 / 8;
+      grid-row: 5 / -1;
     }
   }
 }
