@@ -9,7 +9,10 @@ function App() {
     <div className="app">
       <div className="layout">
         <Header />
-        <Main></Main>
+        <Main>
+          <div className="item b"></div>
+          <div className="item e"></div>
+        </Main>
         <Footer />
       </div>
     </div>
