@@ -1,0 +1,21 @@
+@use './abstracts' as *;
+
+.layout {
+  background: linear-gradient(80deg,
+    rgba($primary, 1.0),
+    rgba($primary, 1.0),
+    rgba($primary, 1.0),
+    rgba($primary, 1.0),
+    rgba($primary, 1.0),
+    rgba($primary, 0.6),
+  );
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  overflow-y: hidden;
+  width: 100vw;
+
+  .item {
+    border: 1px solid red;
+  }
+}
